@@ -1,7 +1,7 @@
 name: Merge OD Vaccines
 on:
   schedule:
-    - cron: '00/05 16,17 * * *'
+    - cron: '00/05 * * * *'
 jobs:
   merge:
     runs-on: ubuntu-latest
