@@ -1,13 +1,13 @@
 name: Merge OD Vaccines
 on:
   schedule:
-    - cron: '00/05 * * * *'
+    - cron: '00 8,12,16,00 * * *'
 jobs:
   merge:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Merge CP upstream master
+      - name: Merge OD upstream master
         run: |
           git config --global user.name 'Fabrizio Miano'
           git config --global user.email 'fabriziomiano@users.noreply.github.com'
