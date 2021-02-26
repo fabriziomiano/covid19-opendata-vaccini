@@ -21,3 +21,4 @@ jobs:
           git checkout master
           git merge --no-edit upstream/master
           git push origin master
+
