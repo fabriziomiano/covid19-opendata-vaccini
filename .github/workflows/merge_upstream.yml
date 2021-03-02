@@ -1,7 +1,7 @@
 name: Merge OD Vaccines
 on:
   schedule:
-    - cron: '00 1,13,19 * * *'
+    - cron: '00 13,19 * * *'
 jobs:
   merge:
     runs-on: ubuntu-latest
@@ -11,7 +11,6 @@ jobs:
         run: |
           git config --global user.name 'Fabrizio Miano'
           git config --global user.email 'fabriziomiano@users.noreply.github.com'
-          # "git checkout master" is unnecessary, already here by default
           git pull --unshallow  # this option is very important, you would get
                                 # complains about unrelated histories without it.
                                 # (but actions/checkout@v2 can also be instructed
