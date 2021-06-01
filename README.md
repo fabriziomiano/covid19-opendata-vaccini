@@ -2,7 +2,7 @@
 <h1 align="center">Covid-19 Opendata Vaccini</h1>
 
 <div align="center">
-<img src="logo.png" width="150">
+<img src="coccarda.png" width="150">
 </div>
 <div align="center">
   Questo repository contiene i dati in formato aperto relativi ai vaccini anti COVID-19
@@ -12,7 +12,7 @@
 
 # Descrizione repository
 
-Questo repository contiene i dati in formato aperto relativi alla consegna e somministrazione nelle varie regioni Italiane dei vaccini anti COVID-19. Il dataset è suddiviso in 6 tabelle che riguardano principalmente i dati sui vaccini rispetto a:
+Questo repository contiene i dati in formato aperto relativi alla consegna e somministrazione nelle varie regioni Italiane dei vaccini anti COVID-19. Il dataset è suddiviso in 8 tabelle che riguardano principalmente i dati sui vaccini rispetto a:
 
 
 *   consegne suddivise per data di consegna e regione;
@@ -22,7 +22,7 @@ Questo repository contiene i dati in formato aperto relativi alla consegna e som
 
 # Descrizione dataset
 
-Nella cartella dati si possono trovare 6 tabelle in formato json e csv:
+Nella cartella dati si possono trovare 8 tabelle in formato json e csv:
 
 
 *   **consegne-vaccini-latest**: dati sul totale delle consegne giornaliere dei vaccini suddivise per regioni.
@@ -32,6 +32,8 @@ Nella cartella dati si possono trovare 6 tabelle in formato json e csv:
 *   **punti-somministrazione-latest**: punti di somministrazione per ciascuna Regione e Provincia Autonoma.
 *   **anagrafica-vaccini-summary-latest**: totali delle somministrazioni per fasce d'età.
 *   **last-update-dataset**: data e ora di ultimo aggiornamento del dataset.
+*   **platea**: dati riferiti alla popolazione vaccinabile suddivisi per Regione/Provincia Autonoma e fascia d'età.
+
 
 I campi di ogni tabella sono schematizzati nelle seguenti tavole:
 
@@ -72,7 +74,7 @@ I campi di ogni tabella sono schematizzati nelle seguenti tavole:
 | area | string | Sigla della regione di consegna. |
 | fornitore | string | nome completo del fornitore del vaccino. |
 | data_somministrazione | datetime | Data di somministrazione. |
-| fascia_anagrafica | string | Identifica la fascia anagrafiche in cui appartengono i soggetti a cui è stato somministrato il vaccino. |
+| fascia_anagrafica | string | Identifica la fascia anagrafica alla quale appartengono i soggetti a cui è stato somministrato il vaccino. |
 | sesso_maschile | integer | Totale dei soggetti di sesso maschile a cui è stato somministrato il vaccino per giorno, regione e fascia d’età. |
 | sesso_femminile | integer | Totale dei soggetti di sesso femminile a cui è stato somministrato il vaccino per giorno, regione e fascia d’età. |
 | prima_dose | integer | Numero prime somministrazioni. |
@@ -127,6 +129,16 @@ I campi di ogni tabella sono schematizzati nelle seguenti tavole:
 | Campo | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | ultimo_aggiornamento | datetime | Data e ora di ultimo aggiornamento del dataset. |
+
+**platea**
+
+| Campo | Tipo di dati | Descrizione |
+| --- | --- | --- |
+| index | integer | Codice identificativo del record. |
+| area | string | Sigla della Regione/Provincia Autonoma. |
+| nome_area | string | Denominazione standard dell'area (dove necessario denominazione bilingue). |
+| fascia_anagrafica | string | Fascia anagrafica a cui appartengono i soggetti vaccinabili. |
+| totale_popolazione | integer | Numero totale della popolazione presente in platea per una data fascia d'età |
 
 
 # Maintainer
